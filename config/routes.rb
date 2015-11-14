@@ -1,22 +1,8 @@
 Rails.application.routes.draw do
-  resources :applications
-  get 'applications/index'
-
-  get 'applications/show'
-
-  get 'applications/new'
-
-  get 'applications/create'
-
-  get 'applications/edit'
-
-  get 'applications/update'
-
-  get 'applications/destroy'
-
   devise_for :users
   root to: 'welcome#index'
   get 'welcome/about'
+  resources :registered_applications
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
